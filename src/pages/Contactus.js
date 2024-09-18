@@ -28,7 +28,6 @@ const Contactus = ({ threshold }) => {
     const [form, setForm] = useState({
         name: "",
         firstname: "",
-        post: "",
         email: "",
         message: ""
     });

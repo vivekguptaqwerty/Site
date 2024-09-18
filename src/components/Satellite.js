@@ -29,7 +29,7 @@ const Satellite = ({ color, visible, position, index }) => {
         section = t("team").toUpperCase();
         break;
       case 4:
-        section = t("satellites.contact_me").toUpperCase();
+        section = t("contactus").toUpperCase();
         break;
       default:
         section = "";
