@@ -12,11 +12,11 @@ import { MdOutlineScience, MdComputer } from 'react-icons/md';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 
-import AboutMe from "./AboutMe";
-import Skills from "./Skills";
-import Experiences from "./Experiences";
-import Projects from "./Projects";
-import ContactMe from "./ContactMe";
+import Aboutus from "./Aboutus";
+import Expertise from "./Expertise";
+import Services from "./Services";
+import Team from "./Team";
+import Contactus from "./Contactus";
 import NotFound from "./NotFound";
 import profilePicture from '../assets/ACM.jpg';
 
@@ -24,7 +24,7 @@ const Portfolio = () => {
     const { t } = useTranslation();
     const navigate = useNavigate();
     const { sectionId } = useParams();
-    const sections = useMemo(() => ["aboutme", "skills", "experiences", "projects", "contactme"], []);
+    const sections = useMemo(() => ["aboutus", "expertise", "services", "team", "contactus"], []);
     const [isCurrentSection, setIsCurrentSection] = useState(sectionId === null || sectionId === undefined ? "aboutme" : sectionId);
     const [isOpen, setIsOpen] = useState(false);
 
@@ -34,19 +34,19 @@ const Portfolio = () => {
         let titleBtn;
 
         switch (section) {
-            case "aboutme":
+            case "aboutus":
                 titleBtn = t("AboutUs");
                 break;
-            case "skills":
+            case "expertise":
                 titleBtn = t("Expertise");
                 break;
-            case "experiences":
+            case "services":
                 titleBtn = t("Services");
                 break;
-            case "projects":
+            case "team":
                 titleBtn = t("Team");
                 break;
-            case "contactme":
+            case "contactus":
                 titleBtn = t("ContactUs");
                 break;
             default:
@@ -61,19 +61,19 @@ const Portfolio = () => {
         let iconSection;
 
         switch (section) {
-            case "aboutme":
+            case "aboutus":
                 iconSection = <BiMask className="icon-menu-section" />
                 break;
-            case "skills":
+            case "expertise":
                 iconSection = <BiBrain className="icon-menu-section" />
                 break;
-            case "experiences":
+            case "services":
                 iconSection = <MdOutlineScience className="icon-menu-section" />
                 break;
-            case "projects":
+            case "team":
                 iconSection = <MdComputer className="icon-menu-section" />
                 break;
-            case "contactme":
+            case "contactus":
                 iconSection = <BiPhone className="icon-menu-section" />
                 break;
             default:
@@ -88,34 +88,34 @@ const Portfolio = () => {
         let currentSection;
 
         switch (section) {
-            case "aboutme":
-                currentSection = <Element name="aboutme" id="aboutme" key={"aboutme"}>
-                    <AboutMe threshold={threshold} />
+            case "aboutus":
+                currentSection = <Element name="aboutus" id="aboutus" key={"aboutus"}>
+                    <Aboutus threshold={threshold} />
                 </Element>
                 break;
-            case "skills":
-                currentSection = <Element name="skills" id="skills" key={"skills"}>
-                    <Skills />
+            case "expertise":
+                currentSection = <Element name="expertise" id="expertise" key={"expertise"}>
+                    <Expertise />
                 </Element>
                 break;
-            case "experiences":
-                currentSection = <Element name="experiences" id="experiences" key={"experiences"}>
-                    <Experiences threshold={threshold} />
+            case "services":
+                currentSection = <Element name="services" id="services" key={"services"}>
+                    <Services threshold={threshold} />
                 </Element>
                 break;
-            case "projects":
-                currentSection = <Element name="projects" id="projects" key={"projects"}>
-                    <Projects menuOpened={isOpen} threshold={threshold} />
+            case "team":
+                currentSection = <Element name="team" id="team" key={"team"}>
+                    <Team menuOpened={isOpen} threshold={threshold} />
                 </Element>
                 break;
-            case "contactme":
-                currentSection = <Element name="contactme" id="contactme" key={"contactme"}>
-                    <ContactMe threshold={threshold} />
+            case "contactus":
+                currentSection = <Element name="contactus" id="contactus" key={"contactus"}>
+                    <Contactus threshold={threshold} />
                 </Element>
                 break;
             default:
-                currentSection = <Element name="aboutme" id="aboutme" key={"aboutme"}>
-                    <AboutMe />
+                currentSection = <Element name="aboutus" id="aboutus" key={"aboutus"}>
+                    <Aboutus />
                 </Element>
                 break;
         }

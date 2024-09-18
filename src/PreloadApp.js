@@ -21,21 +21,7 @@ import nikita from './assets/Team/NikitaS.jpg';
 import revati from './assets/Team/RevatiK.jpg';
 import pranay from './assets/Team/PranayJ.png';
 import krish from './assets/Team/KrishT.jpg';
-import bitbucket from './assets/skills/bitbucket.png';
-import c from './assets/skills/c.png';
-import firebase from './assets/skills/firebase.png';
-import flutter from './assets/skills/flutter.png';
-import github from './assets/skills/github.png';
-import mysql from './assets/skills/mysql.png';
-import nodejs from './assets/skills/nodejs.png';
-import postman from './assets/skills/postman.png';
-import python from './assets/skills/python.png';
-import react from './assets/skills/react.png';
-import redux from './assets/skills/redux.png';
-import sequelize from './assets/skills/sequelize.png';
-import sourcetree from './assets/skills/sourcetree.png';
-import threejs from './assets/skills/threejs.png';
-import kotlin from './assets/skills/kotlin.png';
+
 
 const PreloadApp = () => {
 
@@ -72,22 +58,7 @@ const PreloadApp = () => {
                 preloadImage(nikita),
                 preloadImage(revati),
                 preloadImage(pranay),
-                preloadImage(krish),
-                preloadImage(bitbucket),
-                preloadImage(c),
-                preloadImage(firebase),
-                preloadImage(flutter),
-                preloadImage(github),
-                preloadImage(mysql),
-                preloadImage(nodejs),
-                preloadImage(postman),
-                preloadImage(python),
-                preloadImage(react),
-                preloadImage(redux),
-                preloadImage(sequelize),
-                preloadImage(sourcetree),
-                preloadImage(threejs),
-                preloadImage(kotlin)
+                preloadImage(krish)
             ]).then(() => {
                 setTimeout(() => {
                     sessionStorage.setItem('isSessionActive', JSON.stringify(true));

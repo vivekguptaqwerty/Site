@@ -71,19 +71,19 @@ const Satellite = ({ color, visible, position, index }) => {
 
     switch (index) {
       case 0:
-        url = "/portfolio/aboutme";
+        url = "/portfolio/aboutus";
         break;
       case 1:
-        url = "/portfolio/skills";
+        url = "/portfolio/expertise";
         break;
       case 2:
-        url = "/portfolio/experiences";
+        url = "/portfolio/services";
         break;
       case 3:
-        url = "/portfolio/projects";
+        url = "/portfolio/team";
         break;
       case 4:
-        url = "/portfolio/contactme";
+        url = "/portfolio/contactus";
         break;
       default:
         url = "/portfolio";
